@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dice Roll</title>
+</head>
+<body>
+    <h1>Guess a number</h1>
+
+        <a th:href="@{/roll-dice/n?guess=1}">#1</a>
+        <a th:href="@{/roll-dice/n?guess=2}">#2</a>
+        <a th:href="@{/roll-dice/n?guess=3}">#3</a>
+        <a th:href="@{/roll-dice/n?guess=4}">#4</a>
+        <a th:href="@{/roll-dice/n?guess=5}">#5</a>
+        <a th:href="@{/roll-dice/n?guess=6}">#6</a>
+
+    <h3 th:text="${picked}"></h3>
+<!--    <h3 th:text="${dice}"></h3>-->
+<!--        <label for="number"></label>-->
+<!--        <input type="number" min="1" max="6" name="number" id="number">-->
+
+</body>
+</html>
