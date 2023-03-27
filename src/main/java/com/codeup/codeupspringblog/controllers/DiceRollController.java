@@ -3,6 +3,7 @@ package com.codeup.codeupspringblog.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Random;
@@ -26,8 +27,8 @@ public class DiceRollController {
         return "dice";
     }
 
-    @GetMapping("/roll-dice/n")
-    public String returnDiceRollPage(@RequestParam int guess, Model model){
+    @GetMapping("/roll-dice/{}")
+    public String returnDiceRollPage(@RequestParam int guess,  Model model){
                 Random random = new Random();
         int randomNum = random.nextInt((6 - 1) + 1) + 1;
 
@@ -43,6 +44,6 @@ public class DiceRollController {
 //                model.addAttribute("The random dice roll was " + randomNum + " your number guessed was " + guess);
 
 
-        return "dice";
+        return "diceguess";
     }
 }
